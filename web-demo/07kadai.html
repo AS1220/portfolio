@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>イタリアン　Under Taker</title>
+  <link rel="stylesheet" href="07kadai.css">
+</head>
+<body>
+  <!-- ヘッダ ロゴとグローバルナビゲーション -->
+  <header>
+    <h1>イタリアン　Under Taker</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Heroセクション -->
+  <section id="home">
+    <h1>イタリアン　Under Taker</h1>
+    <p class="lead">イタリアン専門店</p>
+
+    <!-- 背景動画用のvideoタグ -->
+    <div class="video-bg">
+      <video id="video" poster="動画が再生できない場合に表示する画像のpath"
+             webkit-playsinline playsinline muted autoplay loop>
+        <source src="video/Pizza.mp4" type="video/mp4">
+        <source src="video/Pizza.ogv" type="video/ogv">
+        <!-- ブラウザによっては再生できない形式があるので、複数形式を持たせておくのが理想
+        <source src="video/movie.mp4" type="video/mp4">
+        <source src="video/movie.ogv" type="video/ogv">
+        <source src="video/movie.webm" type="video/webm">-->
+        <p>動画を再生できません。</p>
+      </video>
+    </div>
+  </section>
+
+  <!-- Menuセクション -->
+  <section id="menu">
+    <div class="menu-item">
+      <h2>石窯で焼いたピザ</h2>
+      <img src="07image/x21004_01.jpg" alt="">
+      <p>定番のマルゲリータの他５種類</p>
+  </section>
+  
+  <section id="menu2">
+    <div class="menu-item2">
+      <h2>国産和牛</h2>
+      <img src="07image/x21004_02.jpg" alt="">
+      <p>国産和牛のヒレ肉　800円から</p>
+    </div>
+
+    <div class="button-container">
+      <a href="#" class="button">メニューを見る &gt;&nbsp;</a>
+    </div>
+
+  </section>
+
+  <!-- 情報表示セクション -->
+  <section id="about">
+    <div class="about-item">
+          <h3>イタリアン　Under Taker</h3>
+      </div>
+    <div>
+      <table>
+        <tbody>
+          <tr><th>住所</th><td>〒888-8888<br>愛知県豊田市〇〇町123-23<br>(Google map)</td></tr>
+          <tr><th>電話番号</th><td>888-888-8888</td></tr>
+          <tr><th>営業時間</th><td>17:00 〜 23:00<br>(Last Order: 22:30)<br>(Google map)</td></tr>
+          <tr><th>定休日</th><td>毎週月曜日</td></tr>
+          <tr><th>座席数</th><td>25席</td></tr>
+          <tr><th>設備</th><td>キッズスペース・キッズチェア・ベビーカー入店不可<br>駐車場なし<br>(公共交通機関をお使いください)<br>完全喫煙</td></tr>
+          <tr><th>アクセス</th><td>リニモ八草駅徒歩15分</td></tr>
+          <div class="googlemap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13043.70154244099!2d137.1130419!3d35.1834122!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4b91fbaa2287b243!2z5oSb55-l5bel5qWt5aSn5a2m!5e0!3m2!1sja!2sjp!4v1653616329839!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- ここはPCでのみ表示される場所で、GoogleMapの埋め込みが入ります -->
+        </tbody>
+      </table>
+      </div>
+    </div>
+    
+
+  </section>
+
+  <!-- SNSリンクと、著作権表示 -->
+  <footer>
+    <ul>
+      <li><a href="https://insta.com/" target="_blank"><img src="07image/インスタグラムのシンプルなロゴのアイコン1.jpg" alt=""></a></li>
+      <li><a href="https://insta.com/" target="_blank"><img src="07image/FACEBOOKのアイコン素材3.jpg" alt=""></a></li>
+    </ul>
+    <small>
+      &copy; 2022 イタリアン　Under Taker　Co., Ltd.
+    </small>
+
+  </footer>
+  <div id="pagetop"><a href="#top">Page Top</a></div>
+</body>
+</html>
