@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after, *::before {
+  box-sizing: inherit;
+}
+
+html {
+  /* スムーススクロール用 */
+  scroll-behavior: smooth;
+}
+
+/* ヘッダを上に固定 */
+header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  background-color: #000000;
+  z-index: 9999; /*重なりを調整*/
+  color: #fff;
+}
+
+header nav {
+  text-align: right;
+}
+
+header nav > ul li {
+  display: inline-block;
+  text-align: center;
+  line-height: 1em;
+  padding: 0 0.5em;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    display: flex;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav > ul li {
+    display: inline-flex;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+
+/* 参考: https://coco-factory.jp/ugokuweb/move01/6-3-1/ */
+.video-bg {
+  position: absolute; /* fixedからabsoluteに変えました */
+  z-index: -1;/*最背面に設定*/
+  top: 0;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+}
+#video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.menu-item {
+  max-width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .menu-item {
+    max-width: 100%;
+  }
+}
+
+.menu .menu-item h2 {
+  font-weight: normal;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.5;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .menu-item h2 {
+    display: block;
+    margin: 30px;
+    text-align: center;
+  }
+}
+
+.menu-item p {
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .menu-item p {
+    display: block;
+    margin: 20px;
+    text-align: right;
+    font-weight: normal;
+    margin-top: 180px;
+  }
+}
+
+.menu-item img {
+  width: 500px;
+  height: 250px;
+  margin: 0;
+  object-fit: cover;
+  
+}
+
+@media (min-width: 768px) {
+  .menu-item img {
+    display: flex;
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    margin: 50px;
+    float: left;
+  }
+}
+
+.menu-item2 {
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .menu-item2 {
+    max-width: 100%;
+    margin-top: 250px;
+  }
+}
+
+.menu2 .menu-item2 h2 {
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .menu-item2 h2 {
+    display: block;
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+.menu-item2 p {
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .menu-item2 p {
+    display: block;
+    margin: 20px;
+    text-align: left;
+    font-weight: normal;
+    margin-top: 180px;
+  }
+}
+
+.menu-item2 img {
+  width: 500px;
+  height: 250px;
+  margin: 0;
+  object-fit: cover;
+  
+}
+
+@media (min-width: 768px) {
+  .menu-item2 img {
+    display: flex;
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    margin: 50px;
+    float: right;
+  }
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+  justify-content: center;
+}
+.button {
+  position: relative;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px 30px;
+  cursor: pointer;
+  text-align: center;
+  width: 15rem;
+  margin: 50px;
+}
+
+.about {
+  width: 100%;
+  max-width: 100%;
+  background-color: #b8b8b8;
+}
+
+.about-item h3 {
+  font-weight: normal;
+  font-size: 40px;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5;
+  margin: 50px;
+}
+
+@media (min-width: 768px) {
+  .about-item h3 {
+    text-align: left;
+  }
+}
+
+table {
+  display: flex;
+  font-weight: normal;
+  font-size: 15.5px;
+  text-align: center;
+  margin: 0px 0px 40px 0px;
+}
+
+th {
+  width: 300px;
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+
+td {
+  width: 300px;
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+
+.googlemap {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .googlemap {
+  display: flex;
+  float: right;
+  right: 50px;
+  }
+}
+
+footer {
+  margin-top: 100px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
+
+footer ul {
+  display: flex;
+  width: 30%;
+  height: 30%;
+  flex-direction: row;
+  align-items: center;
+  object-fit: cover;
+}
+
+footer li {
+  display: flex;
+  list-style: none;
+}
+
+footer img {
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  padding: auto;
+}
+
+footer small {
+  font-weight: normal;
+  font-size: 10px;
+}
+
+
+
+#pagetop {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  text-indent: -9999px;
+  margin: 0;
+}
+#pagetop a {
+  position: relative;
+  display: block;
+  width: 65px;
+  height: 65px;
+  background: rgba(0,0,0,1);
+  transition: opacity .6s ease;
+}
+#pagetop a:hover {
+  opacity: .3;
+}
+#pagetop a::before {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  content: '';
+  transform: rotate(-45deg);
+  border-top: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+}
+@media screen and (max-width:76px) {
+#pagetop a {
+  width: 45px;
+  height: 45px;
+}
+#pagetop a::before {
+  top: 5px;
+  width: 10px;
+  height: 10px;
+}
+}
