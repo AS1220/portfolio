@@ -1,0 +1,627 @@
+body{
+    margin: 0;
+    height: 100%;
+}
+main h1{
+    margin: 0;
+    color: #ffffff;
+    font-size: 3rem;
+    text-align: right;
+    position: absolute;
+    right: 110px;
+    bottom: 260px;
+}
+main p{
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: right;
+    position: absolute;
+    right: 100px;
+    bottom: 210px;
+}
+
+.menu{
+    position: relative;
+}
+.menu main {
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Back1 {
+    background-image: url(image/OZP_senbanwoganbaru1188_TP_V.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 75%;
+    z-index: -1;  
+}
+.Back2 {
+    background-color: #242424;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 85%;
+    z-index: -2; 
+}
+
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #FFD610;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #ffd610;
+}
+.menu-content ul {
+    padding: 0;
+}
+.menu-content ul li {
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    color:#ffffff;
+    position: relative;
+}
+.menu-content ul li p{
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    color:#ffffff;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #ffd610;
+    transition: all 0.5s;
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;
+}
+
+.service{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.service .sertop{
+    position: absolute;
+    z-index: 30;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    top: 200px;
+    left: 180px;
+    transform: translate(-25, 0);
+}
+
+.service .top{
+    position: absolute;
+    font-size: 1.3rem;
+    z-index: 33;
+    left: 180px;
+    top: 250px;
+}
+.service-main .service-item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.service-main{
+    display: flex;
+    flex-direction: row;
+}
+
+.service .bbox{
+    margin: 0;
+    position: absolute;
+    z-index: 10;
+    left: 170px;
+    top: 220px;
+    width: 200px;
+    height: 200px;
+    background-size: auto auto;
+    background-color: rgba(229, 248, 254, 1); 
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(215, 244, 252, 1) 24px, rgba(215, 244, 252, 1) 48px );
+}
+.service .ybox{
+    margin: 0;
+    position: absolute;
+    z-index: 30;
+    top: 300px;
+    width: 450px;
+    left: 750px;
+    height: 100px;
+    background-size: auto auto; 
+    background-color: rgba(255, 226, 88, 1); 
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px,rgba(254, 215, 13, 1) 24px, rgba(254, 215, 13, 1) 48px );
+}
+.service .gbox{
+    margin: 0;
+    position: absolute;
+    z-index: 20;
+    top: 370px;
+    width: 100%;
+    height: 90%;
+    background-color: #e8e8e8;
+}
+.service .service-main h4{
+    font-size: 4rem;
+    color: #ffd610;
+}
+.service .service-main .service-item-container  h3{
+    font-weight: lighter;
+    font-size: 1.1rem;
+    width: 230px;
+    padding: 10px;
+    background-color: #ffd610;
+}
+
+.service-item1 h5{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: lighter;
+    padding: 10px;
+    margin: 0;
+}
+.service-item1{
+    background-color: #fff;
+    z-index: 30;
+    width: 300px;
+    position: absolute;
+    top: 10px;
+    left: -500px;
+}
+.service-item1 p{
+    padding: 10px;
+}
+.service-item1 h4{
+    left:  230px;
+    top: -100px;
+}
+
+
+.service-item2 h5{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: lighter;
+    padding: 10px;
+    margin: 0;
+}
+.service-item2{
+    background-color: #fff;
+    z-index: 30;
+    width: 300px;
+    position: absolute;
+    top: 70px;
+    left: -150px;
+}
+.service-item2 p{
+    padding: 10px;
+}
+.service-item2 h4{
+    left:  230px;
+    top: -100px;
+}
+
+.service-item3 h5{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: lighter;
+    padding: 10px;
+    margin: 0;
+}
+.service-item3{
+    background-color: #fff;
+    z-index: 30;
+    width: 300px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+.service-item3 p{
+    padding: 10px;
+}
+.service-item3 h4{
+    left:  230px;
+    top: -100px;
+}
+.t1{
+    z-index: 40;
+    position: absolute;
+    left: 320px;
+    top: 280px;
+}
+.t2{
+    z-index: 40;
+    position: absolute;
+    left: 660px;
+    top: 330px;
+}
+.t3{
+    z-index: 40;
+    position: absolute;
+    left: 1020px;
+    top: 410px;
+}
+
+
+.information{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.information p{
+    position: absolute;
+    z-index: 20;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    left: 150px;
+    top: 330px;
+}
+.information .boxx{
+    z-index: 20;
+    padding: 15px 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px solid;
+    top: 430px;
+}
+.boxx ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.boxx ul li{
+    padding: 5px;
+    font-size: 1rem;
+}
+.under{
+    text-decoration: underline;
+}
+.information .yelbox{
+    margin: 0;
+    position: absolute;
+    z-index: 10;
+    top: 370px;
+    width: 100%;
+    height: 270px;
+    background-size: auto auto; 
+    background-color: rgba(255, 226, 88, 1); 
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px,rgba(254, 215, 13, 1) 24px, rgba(254, 215, 13, 1) 48px );
+}
+.button-container2{
+    text-align: center;
+}
+.button2{
+    color: #000;
+    background: #ffd610;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding:0.5em 2em ;
+    border-radius: 30px;
+}
+
+
+.recruit{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+.recruit p{
+    z-index: 50;
+    position: absolute;
+    left: 340px;
+    top: -60px;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+.recruit .blue{
+    margin: 0;
+    position: absolute;
+    z-index: 10;
+    left: 300px;
+    top: -80px;
+    width: 300px;
+    height: 300px;
+    background-size: auto auto;
+    background-color: rgba(229, 248, 254, 1); 
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(215, 244, 252, 1) 24px, rgba(215, 244, 252, 1) 48px );
+}
+.recruit .yellow{
+    margin: 0;
+    position: absolute;
+    z-index: 20;
+    left: 600px;
+    top: 170px;
+    width: 450px;
+    height: 270px;
+    background-size: auto auto; 
+    background-color: rgba(255, 226, 88, 1); 
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px,rgba(254, 215, 13, 1) 24px, rgba(254, 215, 13, 1) 48px );
+}
+.recruit .white{
+    margin: 0;
+    position: absolute;
+    z-index: 40;
+    left: 340px;
+    top: 150px;
+    margin: 0;
+    width        : 570px;
+    height       : 260px;
+    background   : rgba(255, 255, 255, 0.59);
+}
+.recruit .recpic{
+    margin: 0;
+    position: absolute;
+    z-index: 30;
+    left: 480px;
+    top: 0px;
+    width: 550px;
+    max-width: 100%;
+}
+.recruit h3{
+    margin: 0;
+    z-index: 50;
+    position: absolute;
+    left: 370px;
+    top: 160px;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+.button-container3{
+    margin: 0;
+    z-index: 50;
+    position: absolute;
+    left: 350px;
+    top: 270px;
+    text-align: left;
+    margin: 10px;
+}
+.button3{
+    color: #fff;
+    background: #242424;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding:0.5em 2em ;
+    border-radius: 30px;
+}
+/*iraiセクション*/
+.irai{
+    background-image: url(image/PAK85_kikaihandle20141028182041_TP_V4.jpg);
+    background-size: cover;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.irai .item{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+/*lastセクション*/
+.last {
+    text-align: center;
+    height: 300px;
+}
+.last .syosai{
+    margin: 10px;
+}
+.last .syosai p{
+    padding: 0;
+    margin: 0;
+}
+.button-container{
+    text-align: center;
+    margin: 10px;
+}
+.button{
+    color: #fff;
+    background: #242424;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding:0.5em 2em ;
+    border-radius: 30px;
+}
+/*footer*/
+footer{
+    padding: 1.5rem;
+    text-align: center;
+    background-size: auto auto; 
+    background-color: rgba(255, 226, 88, 1); 
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 24px,rgba(254, 215, 13, 1) 24px, rgba(254, 215, 13, 1) 48px );
+}
+footer small{
+    font-size: 1rem;
+}
+
+/*ボタン装飾*/
+
+.button-container2{
+    text-align: center;
+}
+.button2{
+    color: #000;
+    background: #ffd610;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding:0.5em 2em ;
+    border-radius: 30px;
+}
+
+@media (max-width: 768px){
+    .service{
+        height: 2400px;
+    }
+    .service .sertop{
+        position: absolute;
+        z-index: 30;
+        text-decoration: underline;
+        font-size: 1.5rem;
+        top: 200px;
+        left: 40px;
+        transform: translate(-25, 0);
+    }
+    .service-main .service-item-container{
+        display: block;
+    }
+    .service-item1{
+        position: inherit;
+        width: 300px;
+        top: 0;
+        left: 0;
+    }
+    .service-item2{
+        position: inherit;
+        width: 300px;
+        top: 0;
+        left: 0;
+    }
+    .service-item3{
+        position: inherit;
+        width: 300px;
+        top: 0;
+        left: 0;
+    }
+    .service .gbox{
+        height: 70%;
+    }
+    .service .ybox{
+        display: none;
+    }
+    .service .bbox{
+        left: 100px;
+        width: 300px;
+        height: 300px;
+        z-index: 21;
+    }
+    .recruit{
+        left: -400px;
+        height: 800px;
+        width: 600px;
+    }
+    
+    .recruit p{
+        position: inherit;
+        top: 10px;
+        left: 200px;
+    }
+    .recruit .blue{
+        position: inherit;
+
+        top: -10px;
+    }
+    .recruit .white{
+        position: inherit;
+        
+    }
+    .recruit .yellow{
+        position: inherit;
+        left: 500px;
+        top: 360px;
+    }
+    .recruit .recpic{
+        position: inherit;
+        right: 300px;
+        top: -160px;
+    }
+    .recruit h3{
+        position: inherit;
+        top: -260px;
+    }
+    .button-container3{
+        position: inherit;
+        top: -260px;
+    }
+    .button3{
+        position: inherit;
+    }
+}
