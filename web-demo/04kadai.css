@@ -1,0 +1,316 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-weight: normal;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, 'BIZ UDGothic', "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    font-feature-settings: "palt";
+    line-height: 1.125;
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* 幅の狭いコンテンツエリアを以下のクラスで指定しておくことで調整しやすくする */
+  .container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* ヘッダ ナビゲーション */
+  header .container {
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+  
+  header .container h1 {
+    font-weight: normal;
+    font-size: 2.5rem;
+    flex: 1;
+    padding-left: 1rem;
+  }
+  
+  header .container nav ul {
+    display: flex;
+    font-size: 1.5rem;
+  }
+  
+  header .container nav ul li {
+    list-style: none;
+    padding: 1rem 1rem;
+  }
+  
+  
+  /* メインビジュアル(.hero) */
+  .hero {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)),
+        url("image/first.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+  
+  /* 私達について(.about) */
+  .about {
+    padding: 150px 0;
+  }
+  .about h3 {
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .about h3 small {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .about .vision {
+    display: flex;
+  }
+  .about .vision .vision-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+  }
+  .about .vision .vision-texts h4 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .about .vision .vision-texts p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    flex: 1;
+  }
+  .about .vision .vision-images {
+    flex: 1;
+  }
+  .about .vision .vision-images img {
+    width: 100%;
+    max-width: 100%;
+    height: 380px;
+    object-fit: cover;
+  }
+  .about .message {
+    margin-top: 100px;
+  }
+  .about .message .message-texts {
+    text-align: center;
+  }
+  .about .message .message-texts h4 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .about .message .message-texts p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    flex: 1;
+  }
+  .about .message .about-images {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about .message .about-images img {
+    width: calc(100% / 3 - 12px);
+    max-width: calc(100% / 3 - 12px);
+    height: 240px;
+    object-fit: cover;
+  }
+  
+  /* READ MORE ボタンの装飾をまとめて */
+  .linkbutton.readmore {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1em 3em;
+  }
+  
+  /* サービス 事業内容について (.service) */
+  .service {
+    background-color: rgba(0, 0, 0, 0.025);
+    padding: 150px 0;
+  }
+  .service h3 {
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .service h3 small {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .service .service-item-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .service .service-item-container .service-item {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  .service .icon-container .service-icon {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background-color: black;
+    border-radius: 16px;
+    margin: 2rem 0 4rem;
+  }
+  .service .service-main .service-item-container .service-item h4 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .service .service-main .service-item-container .service-item p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  .service .service-sub .service-item-container .service-item h4 {
+    font-size: 1.75rem;
+    padding-bottom: 1.5rem;
+  }
+  .service .service-sub .service-item-container .service-item p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  .service .service-main .service-item-container .service-item {
+    width: calc(100% / 2 - 12px);
+    max-width: calc(100% / 2 - 12px);
+    margin-bottom: 1rem;
+  }
+  .service .service-sub .service-item-container .service-item {
+    width: calc(100% / 3 - 12px);
+    max-width: calc(100% / 3 - 12px);
+  }
+  
+  /* アクセス(.access) */
+  .access {
+    padding: 150px 0;
+  }
+  .access h3 {
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .access h3 small {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .access .access-map {
+    min-height: 50vh;
+    position: relative;
+  }
+  .access .access-map iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .access .access-address {
+    font-size: 1.5rem;
+  }
+  
+  /* お問い合わせ先(.contact) */
+  .contact {
+    background-color: rgba(0, 0, 0, 0.025);
+    padding: 150px 0;
+  }
+  .contact h3 {
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .contact h3 small {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .contact .contact-button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+  }
+  .contact .contact-tel,
+  .contact .contact-form {
+    width: calc(100% / 2 - 6px);
+    max-width: calc(100% / 2 - 6px);
+    height: 150px;
+    flex: 1;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #BCBCBC;
+    color: #fff;
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+  }
+  .contact .contact-tel .tel-hedding {
+    font-size: 1.5rem;
+  }
+  .contact .contact-tel small {
+    font-size: 1.1rem;
+  }
+  
+  /* footer */
+  footer {
+    margin-top: 150px;
+    padding-top: 150px;
+    background-color: #363636;
+    color: #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 420px;
+  }
+  
+  footer h2 {
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  footer nav {
+    flex: 1;
+  }
+  footer nav ul {
+    list-style: none;
+    display: flex;
+  }
+  footer nav ul li {
+    padding: 0 1rem;
+  }
+  
+  footer .copyright {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0.5rem;
+  }
